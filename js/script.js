@@ -8,7 +8,15 @@ window.onload = () => {
     // CREATING
 
     const addButton = document.getElementById('add');
-    addButton.onclick = () => {
+    
+    addButton.onclick = addItem;
+    newElementField.addEventListener("keydown", (event)=> {
+        if (event.key === "Enter") { 
+            addItem();
+        }
+    });
+
+    function addItem() {
         if (newElementField.value == '') {
             alert('Поле не може бути порожнім)');
         }
@@ -22,12 +30,12 @@ window.onload = () => {
         itemName.innerText = newElementField.value;
         itemName.classList.add('itemName');
 
+        newElementField.value = "";
 
         const deleteButton = document.createElement('button');
         deleteButton.classList.add('delete_button');
         deleteButton.innerHTML = 'x';
 
-        const idToDelete = newItemElement.id;
         deleteButton.onclick = () => {
             newItemElement.remove();
         }

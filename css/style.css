@@ -25,6 +25,18 @@ main {
     font-size: 26px;
 }
 
+.logo a {
+    color: white;
+    text-decoration: none;
+    transition: .3s;
+}
+
+.logo a:hover {
+    color: rgb(238, 231, 231);
+    text-decoration: none;
+}
+
+
 .moto {
     font-size: 18px;
 }
