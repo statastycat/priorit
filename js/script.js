@@ -19,6 +19,7 @@ window.onload = () => {
     function addItem() {
         if (newElementField.value == '') {
             alert('Поле не може бути порожнім)');
+            return;
         }
 
         const newItemElement = document.createElement('div');

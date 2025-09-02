@@ -161,3 +161,19 @@ main {
     display: none;
 }
 
+@media only screen and (max-width: 600px) {
+    .items {
+        flex-direction: column;
+    }
+
+    .item {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .options {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
