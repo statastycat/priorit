@@ -35,7 +35,7 @@ window.onload = () => {
 
         const deleteButton = document.createElement('button');
         deleteButton.classList.add('delete_button');
-        deleteButton.innerHTML = 'x';
+        deleteButton.innerHTML = '✖';
 
         deleteButton.onclick = () => {
             newItemElement.remove();

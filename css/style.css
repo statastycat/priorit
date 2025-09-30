@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: sans-serif;
+    font-family: Roboto, sans-serif;
 }
 
 header {
@@ -10,9 +10,9 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 30px 80px;
-    background-color: black;
-    color: white;
-    margin-bottom: 70px;
+    background-color: #1c2c45;
+    color: #cfd6e1;
+    margin-bottom: 100px;
 }
 
 main {
@@ -22,11 +22,12 @@ main {
 }
 
 .logo {
-    font-size: 26px;
+    font-size: 40px;
+    font-weight: bold;
 }
 
 .logo a {
-    color: white;
+    color: #fefefc;
     text-decoration: none;
     transition: .3s;
 }
@@ -38,7 +39,7 @@ main {
 
 
 .moto {
-    font-size: 18px;
+    font-size: 24px;
 }
 
 .preparation__container {
@@ -50,10 +51,16 @@ main {
 }
 
 #new_item {
-    font-family: sans-serif;
-    font-size: larger;
-    padding: 7px 10px;
+    font-family: Roboto, sans-serif;
+    font-size: 22px;
+    padding: 15px 20px;
     margin-bottom: 20px;
+    color: #5c6b83;
+    border-radius: 7px;
+    border: 1px solid #d4dde6;
+    border-width: .3px;
+    outline: none;
+    width: 400px;
 }
 
 .buttons__container {
@@ -65,22 +72,25 @@ main {
 
 .button {
     margin: 20px;
-    background: black;
+    background: #1d71f8;
+    border: 2px solid #1d71f8;
     font-family: sans-serif;
     font-size: larger;
     color: white;
-    padding: 5px 10px;
+    border-radius: 7px;
+    padding: 12px 20px;
     transition: .3s;
 }
 
 .button:hover {
     background-color: white;
-    color: black;
+    color: #1d71f8;
 }
 
 .header {
-    font-size: 28px;
-    margin-bottom: 35px;
+    font-size: 38px;
+    font-weight: bold;
+    margin-bottom: 50px;
     text-align: center;
 }
 
@@ -95,37 +105,47 @@ main {
 .items {
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
+    flex-direction: column;
+    width: 400px;
 }
 
 .item {
-    font-size: 18px;
+    display: flex;
+    justify-content: space-between;
+    font-family: Roboto, sans-serif;
+    font-size: 24px;
     padding: 9px 12px;
     margin: 10px;
-    border: 1px solid black;
+    border: none;
     display: flex;
     align-items: center;
+    color: #090c15;
 }
 
 .delete_button {
+    background-color: #ff4d4f;
+    color: white;
     border: none;
-    font-size: larger;
-    margin-left: 7px;
-    background: inherit;
-    color: brown;
-    border: 2px solid brown;
-    padding: 3px 9px;
-    border-radius: 50px;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    font-size: 18px;
     font-weight: bold;
-    transition: .3s;
+    cursor: pointer;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s ease;
 }
 
 .delete_button:hover {
-    color: white;
-    background-color: brown;
+    background-color: #d9363e;
+
 }
 
 .choosing__container {
+    margin-top: 100px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -136,25 +156,33 @@ main {
 }
 
 .option {
-    transition: .3s;
+    padding: 12px 20px;
+    border-radius: 10px;
+    transition: all 0.2s ease;
+    cursor: pointer;
     font-size: 32px;
+    font-family: Roboto, sans-serif;
+    color: #0f0f0f;
+    transition: .3s;
 }
 
 .option:hover {
-    color: white;
-    background-color: black;
+    background-color: #e6f0ff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .vs {
     font-size: 32px;
     margin: 20px;
-    color: brown;
+    color: #a11824;
     font-weight: bold;
 }
 
 .result {
     border: none;
     font-size: 24px;
+    font-weight: bold;
+    color: #1c2c45
 }
 
 .hidden {
@@ -162,8 +190,28 @@ main {
 }
 
 @media only screen and (max-width: 600px) {
+
+    header {
+        align-items: center;
+        justify-content: center;
+        font-size: 34px;
+    }
+
+    #new_item {
+        width: 320px
+    }
+
+    .header {
+        font-size: 34px;
+    }
+
+    .moto {
+        display: none;
+    }
+
     .items {
-        flex-direction: column;
+        margin-top: -35px;
+        width: 300px;
     }
 
     .item {
@@ -175,5 +223,6 @@ main {
         flex-direction: column;
         align-items: center;
     }
+
 }
 
