@@ -55,7 +55,7 @@ main {
     font-size: 22px;
     padding: 15px 20px;
     margin-bottom: 20px;
-    color: #5c6b83;
+    color: #090c15;
     border-radius: 7px;
     border: 1px solid #d4dde6;
     border-width: .3px;
@@ -114,12 +114,14 @@ main {
     justify-content: space-between;
     font-family: Roboto, sans-serif;
     font-size: 24px;
-    padding: 9px 12px;
+    padding: 15px 20px;
+    border-radius: 7px;
     margin: 10px;
     border: none;
     display: flex;
     align-items: center;
     color: #090c15;
+    background-color: #f8f9fd;
 }
 
 .delete_button {

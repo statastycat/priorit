@@ -65,7 +65,7 @@ window.onload = () => {
 
         document.getElementById('prep_container').remove();
 
-        const pairs = createPairs(Object.keys(options));
+        const pairs = createPairs(Object.keys(options)).sort(() => Math.random() - 0.5);
 
         const optionsContainer = document.getElementById('options');
 
@@ -137,7 +137,12 @@ window.onload = () => {
 
         for (let i = 0; i < elems.length; i++) {
             for (let j = i + 1; j < elems.length; j++) {
-                pairs.push([elems[i], elems[j]]);
+
+                if (Math.random() < 0.5) {
+                    pairs.push([elems[i], elems[j]]);
+                } else {
+                    pairs.push([elems[j], elems[i]]);
+                }
             }
         }
 
